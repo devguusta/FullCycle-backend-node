@@ -15,7 +15,7 @@ export type CategoryCreateCOmmand = {
 }
 
 export class Category {
-    category_id: string;
+    category_id?: string;
     name: string;
     description?: string | null;
     is_active?: boolean;
@@ -23,7 +23,7 @@ export class Category {
 
 
     constructor(props: CategoryCOnstructorProps) {
-        this.category_id = props.category_id ?? null;
+        this.category_id = props.category_id;
         this.name = props.name;
         this.description = props.description ?? null;
         this.is_active = props.is_active ?? true;
